@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 
+
+
 class RegistrationController extends Controller
 {
     public function index()
@@ -111,6 +113,7 @@ class RegistrationController extends Controller
 
         ]);
         $complaints = new complaints;
+        $complaints->name=$request->name;
         $complaints->category = $request->category;
         $complaints->subcategory = $request->subcategory;
         $complaints->complainttype = $request->complainttype;
@@ -135,4 +138,54 @@ class RegistrationController extends Controller
 
         return view('complaints', ['data' => $data]);
     }
+    public function cancel_complaint($id){
+        $data=complaints::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+    
+    public function showprofile()
+    { $user_id = Session::get('loginId');
+        DB::statement(DB::raw("SET @loginId = '$user_id'"));
+        $data = DB::select('SELECT * FROM customers where id=@loginId');
+
+
+        return view('customerprofile', ['data' => $data]);
+        
+    }
+
+    public function change_password(){
+        
+        return view('changepassword');
+    }
+    public function changePasswordView(Request $request){
+
+        $request->validate([
+            'password' => 'required',
+            'new_password' => ['required'],
+            'new_confirm_password' => ['same:new_password'],
+        ]);
+        if(!Hash::check($request->password, auth()->user()->password)){
+            return back()->with("error", "Old Password Doesn't match!");
+        }
+
+
+        #Update the new Password
+        Customer::whereId(auth()->user()->id)->update([
+            'password' => Hash::make($request->new_password)
+        ]);
+
+        return back()->with("status", "Password changed successfully!");
+    }
+
+    public function faq(){
+    
+        return view('FAQ');
+        
+    }
+    public function aboutus(){
+        
+        return view('AboutUs'); 
+    }
+
 }

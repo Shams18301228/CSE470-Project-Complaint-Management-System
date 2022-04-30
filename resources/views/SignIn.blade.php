@@ -41,6 +41,13 @@
                         </div>
                     </div>
                 </div>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item d-none d-lg-block ml-lg-4">
+                        <a href="{{url('/adminsignin')}}" class="btn btn-neutral btn-icon">
+                            <span class="nav-link-inner--text">Log In As Admin</span>
+                        </a>
+                    </li>
+                </ul>
 
             </div>
         </div>
@@ -69,6 +76,7 @@
                 <div class="col-lg-5 col-md-7">
                     <div class="card bg-secondary border-0 mb-0">
                         <div class="card-header bg-transparent pb-5">
+                            <div class="text-black text-center mt-2 mb-4">Log In As Customer</div>
                             <div class="card-body">
                                 <form method="post" action="{{route('signinuser')}}">
                                     @if(Session::has('success'))
@@ -118,7 +126,7 @@
                                         <div class="text-center">
                                             <!-- <button type="button" class="btn btn-primary my-4">Sign in</button> -->
                                             <button type="submit" class="btn btn-primary my-4">
-                                                {{ __('Sign In') }}
+                                                {{ __('Log In') }}
                                             </button>
                                         </div>
                                 </form>

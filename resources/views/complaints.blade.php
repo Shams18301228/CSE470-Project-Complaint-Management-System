@@ -26,7 +26,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="images/System.png" class="navbar-brand-img" alt="...">
+          <img src="images/Complaint.png" class="navbar-brand-img" style="max-height: 75px;">
         </a>
       </div>
       <div class="navbar-inner">
@@ -34,16 +34,11 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="{{url('/Home')}}">
-                <i class="ni ni-tv-2 text-primary"></i>
-                <span class="nav-link-text">Dashboard</span>
-              </a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link" href="{{url('showprofile')}}">
                 <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">Account Settings</span>
+                <span class="nav-link-text">My Profile</span>
               </a>
             </li>
             <li class="nav-item">
@@ -68,7 +63,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">
+              <a class="nav-link" href="{{url('change_password')}}">
+              <i class="ni ni-lock-circle-open"></i>
+                <span class="nav-link-text">Change Password</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('faq')}}">
                 <i class="ni ni-chat-round"></i>
                 <span class="nav-link-text">FAQ</span>
               </a>
@@ -128,7 +129,7 @@
               <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
                 <!-- Dropdown header -->
                 <div class="px-3 py-3">
-                  <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">13</strong> notifications.</h6>
+                  <h6 class="text-sm text-muted m-0"><strong class="text-primary">13</strong></h6>
                 </div>
                 <!-- List group -->
                 <div class="list-group list-group-flush">
@@ -141,19 +142,19 @@
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
                           <div>
-                            <h4 class="mb-0 text-sm">Md Isteak Shams</h4>
+                            <h4 class="mb-0 text-sm"></h4>
                           </div>
                           <div class="text-right text-muted">
-                            <small>2 hrs ago</small>
+                            <small></small>
                           </div>
                         </div>
-                        <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
+                        <p class="text-sm mb-0"></p>
                       </div>
                     </div>
                   </a>
                 </div>
                 <!-- View all -->
-                <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">View all</a>
+                <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3"></a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -166,88 +167,43 @@
                     <span class="shortcut-media avatar rounded-circle bg-gradient-red">
                       <i class="ni ni-calendar-grid-58"></i>
                     </span>
-                    <small>Calendar</small>
+                    <small></small>
                   </a>
                   <a href="#!" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-orange">
                       <i class="ni ni-email-83"></i>
                     </span>
-                    <small>Email</small>
+                    <small></small>
                   </a>
                   <a href="#!" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-info">
                       <i class="ni ni-credit-card"></i>
                     </span>
-                    <small>Payments</small>
+                    <small></small>
                   </a>
                   <a href="#!" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-green">
                       <i class="ni ni-books"></i>
                     </span>
-                    <small>Reports</small>
+                    <small></small>
                   </a>
                   <a href="#!" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-purple">
                       <i class="ni ni-pin-3"></i>
                     </span>
-                    <small>Maps</small>
+                    <small></small>
                   </a>
                   <a href="#!" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-yellow">
                       <i class="ni ni-basket"></i>
                     </span>
-                    <small>Shop</small>
+                    <small></small>
                   </a>
                 </div>
               </div>
             </li>
           </ul>
-          <!-- <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
-            <li class="nav-item dropdown">
-              <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="media align-items-center">
-                  <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="images/Mine.jpg">
-                  </span>
-                  <div class="media-body  ml-2  d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">Md Isteak Shams</span>
-                  </div>
-                </div>
-              </a>
-              <div class="dropdown-menu  dropdown-menu-right ">
-                <div class="dropdown-header noti-title">
-                  <h6 class="text-overflow m-0">Welcome!</h6>
-                </div>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-single-02"></i>
-                  <span>My profile</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-settings-gear-65"></i>
-                  <span>Settings</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-calendar-grid-58"></i>
-                  <span>Activity</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-support-16"></i>
-                  <span>Support</span>
-                </a>
-
-
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="" onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                  <i class="ni ni-user-run"></i>{{ __('Logout') }}
-                </a>
-
-                <form id="logout-form" action="" method="POST" style="display: none;">
-                  @csrf
-                </form>
-              </div>
-            </li>
-          </ul> -->
+          
         </div>
       </div>
     </nav>
@@ -261,8 +217,8 @@
               <h6 class="h2 text-white d-inline-block mb-0">Customer</h6>
               <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                <li class="breadcrumb-item"><a href="{{url('/admin')}}"><i class="ni ni-circle-08"></i></a></li>
-                  <li class="breadcrumb-item"><a href="{{url('/patient_show')}}">Profile</a></li>
+                <li class="breadcrumb-item"><a href=""><i class="ni ni-circle-08"></i></a></li>
+                  <li class="breadcrumb-item"><a href="{{url('/makecomplaint')}}">Lodge Complaint</a></li>
 
                 </ol>
               </nav>
@@ -289,8 +245,8 @@
                     <th scope="col" class="sort" data-sort="name">Complaints Category</th>
                     <th scope="col" class="sort" data-sort="budget">Complaints SubCategory</th>
                     <th scope="col" class="sort" data-sort="budget">Complaint Type</th>
-
                     <th scope="col">Status</th> 
+                    <th scope="col" class="sort" data-sort="budget">Cancel Complaint</th>
                   </tr>
                 </thead>
                 <tbody class="list">
@@ -300,6 +256,7 @@
       <td>{{$complaints->subcategory}}</td>
       <td>{{$complaints->complainttype}}</td>
       <td>{{$complaints->status}}</td>
+      <td><a class="btn btn-danger" onclick="return confirm('Are you sure?You want to cancel this complaint?')" href="{{url('cancel_complaint', $complaints->id)}}">Cancel</a></td>
       
      
       </tr>
